@@ -69,7 +69,8 @@ class Person:
 		if 'id' in self.attr:
 			  self.id = self.attr['id']
 		else:
-			self.id = re.sub('[^0-9A-Za-z]', '', self.name)
+			#self.id = re.sub('[^0-9A-Za-z]', '', self.name)
+			self.id = self.name
 			if 'unique' in self.attr:
 				  self.id += str(random.randint(100, 999))
 
@@ -85,13 +86,11 @@ class Person:
 	def graphviz(self):
 		label = self.name
 		if 'surname' in self.attr:
-			label += '\\n« ' + str(self.attr['surname']) + '»'
+			label += '({})'.format(str(self.attr['surname']))
 		if 'birthday' in self.attr:
-			label += '\\n' + str(self.attr['birthday'])
-			if 'deathday' in self.attr:
-				label += ' † ' + str(self.attr['deathday'])
-		elif 'deathday' in self.attr:
-			label += '\\n† ' + str(self.attr['deathday'])
+			label += '\\n生于' + str(self.attr['birthday'])
+		if 'deathday' in self.attr:
+			label += '\\n卒于' + str(self.attr['deathday'])
 		if 'notes' in self.attr:
 			label += '\\n' + str(self.attr['notes'])
 		opts = ['label="' + label + '"']
