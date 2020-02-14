@@ -1,0 +1,98 @@
+# This file is an example to show how to format a family.
+
+# Two lines represent an union:
+彭爵裕 (M, surname=名吴寄字清海, birthday=嘉庆十二年十月初一, deathday=同治十三年七月初七)
+胡氏 (F, id=hu1, birthday=嘉庆十九年八月十九, deathday=光绪元年三月十五, notes=雷坪胡义方女名敢)
+# Indented lines after the union represent children
+	彭禄安 (M, surname=名富松字国安, birthday=同治三年四月十六)
+	彭禄松 (M, surname=名志松, birthday=同治六年八月初十)
+	彭禄旺 (M, birthday=同治十三年十月廿五)
+
+彭禄安
+胡氏 (F, id=hu2, birthday=同治五年九月十六, notes=胡全香女名大)
+	彭万明 (M, surname=字光耀, birthday=光绪十五年三月十七, deathday=民国三十八年)
+	彭万福承禄松嗣 (M)
+	彭万禄承禄旺嗣 (M)
+	彭云香 (F, notes=配百罗湾孙华，求德爹的母亲<BR/>桂英?)
+
+彭万明
+孙正英 (F, birthday=光绪十三年四月初四, deathday=民国三十七年腊月十六)
+	彭代远 (M)
+	彭代成 (M, surname=字协和, birthday=民国三年闰五月十八)
+	彭代森承万福嗣 (M)
+	彭代江 (M, surname=名顺江字振球, birthday=民国十九年正月十四, deathday=二零零零年五月初七)
+
+彭禄松
+孙穆堂女名重 (F)
+	彭万寿 (M, notes=幼殇)
+	彭万福 (M, surname=字绥之, notes=禄安第二子承嗣, birthday=光绪十七年冬月十六, deathday=一九七六年四月初七<BR/>（谱载民国三十九年，有误）)
+
+彭万福
+	彭代森 (M, surname=字成林又名益华, birthday=民国十六年九月初五, deathday=二零零零年八月, notes=万明第三子承嗣, avatar=pengyihua.png)
+
+彭代森 (M)
+孙菊容 (F, birthday=民国十四年十月十六, deathday=二零零六年二月廿二, avatar=sunjurong.png)
+	彭爱梅 (F, birthday=民国三十八年正月十六, notes=配孙海江, avatar=pengaimei.png)
+	彭久春 (M, surname=字怀德, birthday=一九五五年五月廿五, avatar=penghuaide.png)
+	彭爱兰 (F, birthday=一九六二年三月廿六, notes=配土库村孙民升, avatar=pengailan.png)
+	
+彭久春
+孙菊芳 (F, birthday=一九五九年九月初三, avatar=sunjufang.png)
+	彭广智 (M, surname=彭广, birthday=一九八二年四月初五, avatar=pengguang.png)
+	彭广仁 (M, surname=彭敏, birthday=一九八四年三月初六, avatar=pengmin.png)
+	彭广勇 (M, surname=彭山, birthday=一九八六年九月初八, avatar=pengshan.png)
+
+彭代成
+孙春香 (F, birthday=民国元年正月十一, deathday=一九九三年四月二十, avatar=sunchunxiang.png)
+	彭久言 (M)
+	彭久和 (M)
+	彭佑娇 (F, notes=配陈仲相)
+	彭树娣 (F, deathday=二零一九年三月廿四, notes=配百罗湾孙修国, avatar=pengshudi.png)
+	彭久宏 (M, surname=字永林, birthday=民国三十七年十月十六, deathday=二零一二年, avatar=pengyonglin.png)
+
+彭代江
+孙姣梅 (F, notes=孙隆发三女, birthday=民国二十六年五月十二, avatar=sunjiaomei.png)
+	彭春花 (F, birthday=一九五二年正月廿三, notes=配沙畈洪继球)
+	彭秀兰 (F, birthday=一九六三年六月廿二, notes=配塔林村柯玉祝)
+	彭淑珍 (F, birthday=一九六五年腊月初九?, notes=配柳林湾孙革生)
+	彭久胜 (M, surname=字汉忠, birthday=一九六八年五月十二, avatar=penghanzhong.png)
+	彭久强 (M, surname=字定强, birthday=一九七零年腊月初九, avatar=pengdingqiang.png)
+
+彭久胜 (M)
+汪义珍 (F, notes=汪金法二女, birthday=一九六六年五月十四, avatar=wangyizhen.png)
+	彭广清 (M, surname=字世杰, birthday=一九八九年七月廿七, avatar=pengshijie.png)
+
+彭久强 (M)
+罗义捷 (F, birthday=一九七一年六月十六, avatar=luoyijie.png)
+	彭泽楠 (F, birthday=二零零五年冬月十一, avatar=pengzenan.png)
+	彭泽茜 (F, birthday=二零零五年冬月十一, avatar=pengzixi.png)
+
+彭禄旺
+	彭万禄 (M, notes=禄安第三子承嗣, birthday=光绪十九年腊月廿七, deathday=民国三十六年二月廿四)
+
+彭万禄
+赵贤英 (F, notes=赵天柱次女, birthday=光绪二十六年三月廿六, deathday=一九五四年七月十三)
+	彭代祥 (M, birthday=民国八年三月初三, deathday=一九九八年正月廿四)
+
+彭代祥
+孙树乖 (F, birthday=民国八年七月廿四, deathday=二零一零年二月廿七, avatar=sunshuguai.png)
+	彭春兰 (F, birthday=一九四九年四月初二, notes=配柳林湾孙掌珠, avatar=pengchunlan.png)
+	彭久延 (M, surname=寿延, birthday=一九五一年正月初六, avatar=pengshouyan.png)
+	彭久长 (M, surname=寿长, birthday=一九五三年腊月十九, avatar=pengshouchang.png)
+	彭久芳 (M, surname=春芳, birthday=一九五七年正月初五, avatar=pengchunfang.png)
+
+彭久延
+	彭珍 (F, birthday=一九九七年正月初一, avatar=pengzhen.png)
+
+彭久长
+胡满娥 (F, birthday=一九五八年腊月十七, avatar=humane.png)
+	彭桂求 (F, birthday=一九八四年八月十二, avatar=penghuiqiu.png)
+	彭惠元 (F, birthday=一九八六年十月十二, deathday=二零零二年三月初六, avatar=penghuiyuan.png)
+	彭丽娟 (F, birthday=一九八九年七月初七, avatar=penglijuan.png)
+
+彭久芳
+孙千祥 (F, birthday=一九六二年五月十八, avatar=sunqianxiang.png)
+	彭惠敏 (F, birthday=一九八三年七月廿五, avatar=penghuimin.png)
+	彭惠云 (F, birthday=一九八五年四月廿三, avatar=penghuiyun.png)
+	彭广松 (M, surname=字文杰, birthday=一九八七年六月二十, avatar=pengwenjie.png)
+

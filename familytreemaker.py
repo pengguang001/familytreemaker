@@ -84,6 +84,7 @@ class Person:
 				'  %d households' % len(self.households)
 
 	def graphviz(self):
+		'''
 		label = self.name
 		if 'surname' in self.attr:
 			label += '({})'.format(str(self.attr['surname']))
@@ -93,7 +94,31 @@ class Person:
 			label += '\\n卒于' + str(self.attr['deathday'])
 		if 'notes' in self.attr:
 			label += '\\n' + str(self.attr['notes'])
-		opts = ['label="' + label + '"']
+		'''
+		label = "<TABLE BORDER=\"0\">";
+		if 'avatar' in self.attr:
+			label += '<TR><TD><IMG SRC="img/{}" SCALE=\"TRUE\"/></TD></TR>'.format(str(self.attr['avatar']))
+		else:
+			if 'F' in self.attr:
+				label += '<TR><TD><IMG SRC="img/female.png" SCALE=\"TRUE\"/></TD></TR>'
+			else:
+				label += '<TR><TD><IMG SRC="img/male.png" SCALE=\"TRUE\"/></TD></TR>'
+		label += "<TR><TD>"
+		label += self.name
+		if 'surname' in self.attr:
+			label += '({})'.format(str(self.attr['surname']))
+		label += "</TD></TR>"
+		extra = ""
+		if 'birthday' in self.attr:
+			extra += '生于' + str(self.attr['birthday']) + '<BR/>'
+		if 'deathday' in self.attr:
+			extra += '卒于' + str(self.attr['deathday']) + '<BR/>'
+		if 'notes' in self.attr:
+			extra += str(self.attr['notes']) + '<BR/>'
+		if len(extra) != 0:
+			label += '<TR><TD BALIGN="LEFT">{}</TD></TR>'.format(extra)
+		label += "</TABLE>"
+		opts = ['label=<' + label + '>']
 		opts.append('style=filled')
 		opts.append('fillcolor=' + ('F' in self.attr and 'bisque' or
 					('M' in self.attr and 'azure2' or 'white')))
@@ -155,9 +180,11 @@ class Family:
 		family members infos about this union.
 
 		"""
+		"""
 		if len(h.parents) != 2:
 			print('error: number of parents != 2')
 			return
+		"""
 
 		h.id = len(self.households)
 		self.households.append(h)
@@ -241,8 +268,11 @@ class Family:
 		"""Returns the spouse or husband of a person in a union.
 
 		"""
-		return	household.parents[0] == person \
-				and household.parents[1] or household.parents[0]
+		if len(household.parents) == 2:
+			return	household.parents[0] == person \
+					and household.parents[1] or household.parents[0]
+		else:
+			return None
 
 	def display_generation(self, gen):
 		"""Outputs an entire generation in DOT format.
@@ -274,16 +304,18 @@ class Family:
 			for i in range(0, int(l/2)):
 				h = p.households[i]
 				spouse = Family.get_spouse(h, p)
-				print('\t\t%s -> h%d -> %s;' % (spouse.id, h.id, p.id))
-				print('\t\th%d%s;' % (h.id, Family.invisible))
+				if spouse != None:
+					print('\t\t%s -> h%d -> %s;' % (spouse.id, h.id, p.id))
+					print('\t\th%d%s;' % (h.id, Family.invisible))
 
 			# Display those on the right (at least one)
 			for i in range(int(l/2), l):
 				h = p.households[i]
 				spouse = Family.get_spouse(h, p)
-				print('\t\t%s -> h%d -> %s;' % (p.id, h.id, spouse.id))
-				print('\t\th%d%s;' % (h.id, Family.invisible))
-				prev = spouse.id
+				if spouse != None:
+					print('\t\t%s -> h%d -> %s;' % (p.id, h.id, spouse.id))
+					print('\t\th%d%s;' % (h.id, Family.invisible))
+					prev = spouse.id
 		print('\t}')
 
 		# Display lines below households
@@ -308,8 +340,12 @@ class Family:
 		for p in gen:
 			for h in p.households:
 				if len(h.kids) > 0:
-					print('\t\th%d -> h%d_%d;'
-					      % (h.id, h.id, int(len(h.kids)/2)))
+					if len(h.parents) != 1:
+						print('\t\th%d -> h%d_%d;'
+						      % (h.id, h.id, int(len(h.kids)/2)))
+					else:
+						print('\t\t%s -> h%d_%d;'
+						      % (h.parents[0].id, h.id, int(len(h.kids)/2)))
 					i = 0
 					for c in h.kids:
 						print('\t\th%d_%d -> %s;'
@@ -327,7 +363,8 @@ class Family:
 		gen = [ancestor]
 
 		print('digraph {\n' + \
-		      '\tnode [shape=box];\n' + \
+		      '\tnode [shape=box, fontname="Heiti SC"];\n' + \
+		      '\tgraph [label="彭氏宗谱(二零一九年正月第一版)", fontname="Heiti SC", labelloc=top, labeljust=right, fontsize=30];\n' + \
 		      '\tedge [dir=none];\n')
 
 		for p in self.everybody.values():
